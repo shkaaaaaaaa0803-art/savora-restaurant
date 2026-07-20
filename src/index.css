@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Karla', sans-serif;
+  --color-emerald-deep: #064e3b;
+  --color-emerald-mid: #0d7a5f;
+  --color-gold: #c9a84c;
+  --color-gold-soft: #e6c976;
+  --color-bone: #f7f1e4;
+  --color-ink: #0b1a15;
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slow-zoom {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+@utility animate-reveal { animation: reveal-up 1s cubic-bezier(0.19,1,0.22,1) both; }
+@utility animate-slow-zoom { animation: slow-zoom 6s ease-out both; }
+@utility no-scrollbar {
+  &::-webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+}
